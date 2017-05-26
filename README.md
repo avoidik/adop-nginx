@@ -13,8 +13,8 @@ adop-nginx provides Nginx with LDAP support. Nginx is a high performance reverse
 # How to use this image
 
       $ docker run --name <your-container-name> -dt \
-        -v /resources/configuration/:/etc/nginx/:ro \
-        -v /resources/release_note:/usr/share/nginx/html/:ro \
+        -v /resources/configuration:/resources/configuration:ro \
+        -v /resources/release_note:/resources/release_note:ro \
         -v /var/log:/var/log 
         -p 443:443 \
         -p 80:80 \
